@@ -12,74 +12,42 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 * nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements
 -->
 
-<!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
-<!-- * If you are an organization making private packages, you probably have no issues here -->
-<!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
-    <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
-    <id>microsoftedgewebdriver</id>
+    <id>microsoftwebdriver</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
-    <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
-    <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
     <version>1.0.0</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
-    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <packageSourceUrl>https://github.com/MicrosoftEdge/MicrosoftWebDriver-chocolatey</packageSourceUrl>
     <owners>molant</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>MicrosoftEdgeWebDriver (Install)</title>
-    <authors>MicrosoftEdge</authors>
-    <!-- projectUrl is required for the community feed -->
+    <title>Microsoft WebDriver</title>
+    <authors>Microsoft Edge</authors>
     <projectUrl>https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</projectUrl>
     <iconUrl>https://user-images.githubusercontent.com/606594/41067519-c87de6bc-699a-11e8-8824-7028c8ac165d.png</iconUrl>
     <copyright>Microsoft 2018</copyright>
-    <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://az813057.vo.msecnd.net/eulas/webdriver-eula.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
     <docsUrl>https://docs.microsoft.com/en-us/microsoft-edge/webdriver</docsUrl>
-    <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/</bugTrackerUrl>
-    <tags>microsoftedgewebdriver edge webdriver</tags>
-    <summary>Install the right Web Driver version for your Windows 10 build</summary>
-    <description>While the Microsoft Edge Web Driver downloads are available in https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/,
+    <tags>microsoftedgewebdriver edge microsoft webdriver driver web</tags>
+    <summary>Install the right WebDriver version for your Windows 10 build</summary>
+    <description>While the Microsoft Edge WebDriver downloads are available in https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/,
     it's very common to end up using a wrong version. Even more, starting with
-    the Windows 10 18H2 update Web Driver will be a feature of the OS.
-    This packages automatically installs the right version for Web Driver based
+    the Windows 10 18H2 update WebDriver will be a feature of the OS.
+    This packages automatically installs the right version for WebDriver based
     on your Windows 10 build number.
+    This package will add `MicrosoftWebDriver.exe` to your `PATH` so it can be used
+    anywhere.
     Only stable versions of Windows 10 are supported prior build 17134.</description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
-    <!-- =============================== -->
-
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
-    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
-         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
-         - You want to use Get-PackageParameters and on less than 0.11.0
-         - You want to take advantage of other functions in the core community maintainer's team extension package
-    -->
-
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
   </metadata>
   <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>

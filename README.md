@@ -1,14 +1,14 @@
-# Microsoft Web Driver
+# Microsoft WebDriver
 
-This project contains the files that are part of the Microsoft Web Driver
+This project contains the files that are part of the Microsoft WebDriver
 chocolatey package.
 
-While the Microsoft Edge Web Driver downloads are available in https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/,
+While the Microsoft Edge WebDriver downloads are available in https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/,
 it's very common to end up using a wrong version. Even more, starting with
-the Windows 10 18H2 update Web Driver will be an optional capability of the OS.
-The chocolatey package automatically installs the right version for Web Driver based
+the next release of Windows 10 Microsoft WebDriver will be an optional capability of the OS.
+The chocolatey package automatically installs the right version of WebDriver based
 on the Windows 10 build number.
-Only stable versions of Windows 10 are supported prior build 17134.
+Only stable versions of Windows 10 are supported prior to build 17134.
 
 ## Test the package locally
 

@@ -25,14 +25,16 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://docs.microsoft.com/en-us/microsoft-edge/webdriver</docsUrl>
     <bugTrackerUrl>https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/</bugTrackerUrl>
-    <tags>microsoftedgewebdriver edge microsoft webdriver driver web</tags>
+    <tags>edge microsoft webdriver driver web microsoftedgewebdriver microsoftwebdriver</tags>
     <summary>Install the right WebDriver version for your Windows 10 build</summary>
-    <description>While the Microsoft Edge WebDriver downloads are available in https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/,
-    it's very common to end up using a wrong version. Even more, starting with
-    the Windows 10 18H2 update WebDriver will be a feature of the OS.
-    This packages automatically installs the right version for WebDriver based
-    on your Windows 10 build number.
-    This package will install `MicrosoftWebDriver.exe` into:
+    <description>While the Microsoft Edge WebDriver downloads are available in https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/, it's
+    very common to end up using a wrong version. Even more, build after the
+    Windows 10 April 2018 Update will have WebDriver as a capability of the OS
+    instead of a separate download file.
+    This package automatically installs the right version for WebDriver (file or
+    capability) based on your Windows 10 build number.
+
+    `MicrosoftWebDriver.exe` will get added to the following paths:
     * `%WINDIR%\System32` if your OS is x86
     * `%WINDIR%\SysWOW64` if your OS is x64
 

@@ -2,21 +2,10 @@
 <!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
 <!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://chocolatey.org/packages). -->
 
-<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
-
-<!--
-This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
-
-* the package xmlns schema url may cause issues with nuget.exe
-* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces
-* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements
--->
-
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <id>microsoftwebdriver</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
@@ -43,9 +32,13 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     the Windows 10 18H2 update WebDriver will be a feature of the OS.
     This packages automatically installs the right version for WebDriver based
     on your Windows 10 build number.
-    This package will add `MicrosoftWebDriver.exe` to your `PATH` so it can be used
-    anywhere.
-    Only stable versions of Windows 10 are supported prior build 17134.</description>
+    This package will install `MicrosoftWebDriver.exe` into:
+    * `%WINDIR%\System32` if your OS is x86
+    * `%WINDIR%\SysWOW64` if your OS is x64
+
+    In both cases, it will be in the `PATH` so it can be used anywhere.
+
+    **Only stable versions of Windows 10 are supported prior build 17134.**</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

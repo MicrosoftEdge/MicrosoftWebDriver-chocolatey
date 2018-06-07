@@ -27,11 +27,11 @@ if ($build -eq 17682) {
     $checksum = 'af81564e0c1d4fc4494a7164fd9cdcd1da925a5b4b26495517b5eef03f5f6708ff4d2decbe6fab2040ebabe5c5d084ca46dbfc4ae1731cc855f19332e6d7c2b8'
     $url = 'https://download.microsoft.com/download/3/2/D/32D3E464-F2EF-490F-841B-05D53C848D15/MicrosoftWebDriver.exe'
 } elseif ($build -eq 10586) {
-    $checksum = '4663210521477ec2f92e142cc9a222be0939885d266e668ac131e1d044ccbab7d0204d2b7e08d6dd87977289ddb18bef5a32eae22c2a47c63b1feaed503909e8'
-    $url = 'https://download.microsoft.com/download/C/0/7/C07EBF21-5305-4EC8-83B1-A6FCC8F93F45/MicrosoftWebDriver.msi'
+    $checksum = 'a02b9daed04ca254a103071069f4380acdecab50632b7f59e9af5a6372a94a952605dd489e991d20caffce3089ad9c5591edd48a364c69ac11f0d026ad31b72f'
+    $url = 'https://download.microsoft.com/download/C/0/7/C07EBF21-5305-4EC8-83B1-A6FCC8F93F45/MicrosoftWebDriver.exe'
 } elseif ($build -eq 10240) {
-    $checksum = '98aad718211b037fc92501f1a9c6ee4fc95522cf21b926c68c51df6cd7c8e3d89b2012e033fd88ce57264ee62d21b4b9254da7d1da38324abc83730710e5f6a4'
-    $url = 'https://download.microsoft.com/download/8/D/0/8D0D08CF-790D-4586-B726-C6469A9ED49C/MicrosoftWebDriver.msi'
+    $checksum = 'f0ad26abef51a571c663a14cc08d0421c3f50b783913c092de883cbe65880a45e061a9f3d200f6c0b301190042414a087e8b917900d7aa8c4e0a824afba46f7c'
+    $url = 'https://download.microsoft.com/download/8/D/0/8D0D08CF-790D-4586-B726-C6469A9ED49C/MicrosoftWebDriver.exe'
 } else {
   throw "Your Windows 10 build ($build) is not supported by this installer."
 }

@@ -1,12 +1,12 @@
-# Microsoft Edge Web Driver
+# Microsoft Web Driver
 
-This project contains the files that are part of the Microsoft Edge Web Driver
-cholatey package.
+This project contains the files that are part of the Microsoft Web Driver
+chocolatey package.
 
 While the Microsoft Edge Web Driver downloads are available in https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/,
 it's very common to end up using a wrong version. Even more, starting with
 the Windows 10 18H2 update Web Driver will be an optional capability of the OS.
-The cholatey package automatically installs the right version for Web Driver based
+The chocolatey package automatically installs the right version for Web Driver based
 on the Windows 10 build number.
 Only stable versions of Windows 10 are supported prior build 17134.
 
@@ -17,7 +17,7 @@ To test this package locally you will need to:
 1. Install [Chocolatey](https://chocolatey.org/install)
 1. Open an elevated PowerShell window
 1. From the root of the project, execute `choco pack`
-1. Then run `choco install packageName -dv -s .`
+1. Then run `choco install microsoftwebdriver -dv -s .`
 
 For more information you can check the [Chocolatey documentation](https://chocolatey.org/docs/create-packages)
 

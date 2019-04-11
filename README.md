@@ -3,6 +3,7 @@
 This project contains the files that are part of the Microsoft WebDriver
 chocolatey package.
 
+* For EdgeHTML engine:
 While the Microsoft Edge WebDriver downloads are available in https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/,
 it's very common to end up using a wrong version. Even more, starting with
 the next release of Windows 10 Microsoft WebDriver will be an optional capability of the OS.
@@ -10,14 +11,26 @@ The chocolatey package automatically installs the right version of WebDriver bas
 on the Windows 10 build number.
 Only stable versions of Windows 10 are supported prior to build 17134.
 
+* For Chromium-based engine:
+Microsoft EdgeDriver will be compatible with all Windows 10 versions.
+
 ## Test the package locally
 
 To test this package locally you will need to:
 
+* For EdgeHTML engine:
+1. Navigate to 'MicrosoftWebDriver'
 1. Install [Chocolatey](https://chocolatey.org/install)
 1. Open an elevated PowerShell window
 1. From the root of the project, execute `choco pack`
 1. Then run `choco install microsoftwebdriver -dv -s .`
+
+* For Chromium-based engine:
+1. Navigate to 'MSEdgeDriver'
+1. Install [Chocolatey](https://chocolatey.org/install)
+1. Open an elevated PowerShell window
+1. From the root of the project, execute `choco pack`
+1. Then run `choco install msedgedriver -dv -s .`
 
 For more information you can check the [Chocolatey documentation](https://chocolatey.org/docs/create-packages)
 

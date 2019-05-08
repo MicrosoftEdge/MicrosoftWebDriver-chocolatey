@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
+<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://chocolatey.org/packages). -->
+
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
+    <id>msedgedriver</id>
+    <!-- version should MATCH as closely as possible with the underlying software -->
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/MicrosoftEdge/MicrosoftWebDriver-chocolatey/MSEgeDriver</packageSourceUrl>
+    <owners>loly</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>Microsoft EdgeDriver</title>
+    <authors>MicrosoftEdge</authors>
+    <projectUrl>https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</projectUrl>
+    <iconUrl>https://user-images.githubusercontent.com/606594/41067519-c87de6bc-699a-11e8-8824-7028c8ac165d.png</iconUrl>
+    <copyright>Microsoft 2019</copyright>
+    <licenseUrl>https://az813057.vo.msecnd.net/eulas/webdriver-eula.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://docs.microsoft.com/en-us/microsoft-edge/webdriver</docsUrl>
+    <bugTrackerUrl>https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/</bugTrackerUrl>
+    <tags>edge chromium microsoft webdriver driver web microsoftedgewebdriver microsoftwebdriver</tags>
+    <summary>Install the WebDriver for MicrosoftEdge (Chromium-based)</summary>
+    <description>`MSEdgeDriver.exe` will get added to `%WINDIR%\SysWOW64` path. Please ensure that
+    it is in the `PATH` environment variable</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

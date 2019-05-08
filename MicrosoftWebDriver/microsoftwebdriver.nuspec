@@ -10,7 +10,7 @@
     <id>microsoftwebdriver</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <version>1.0.0</version>
-    <packageSourceUrl>https://github.com/MicrosoftEdge/MicrosoftWebDriver-chocolatey</packageSourceUrl>
+    <packageSourceUrl>https://github.com/MicrosoftEdge/MicrosoftWebDriver-chocolatey/MicrosoftWebDriver</packageSourceUrl>
     <owners>molant</owners>
     <!-- ============================== -->
 

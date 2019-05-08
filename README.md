@@ -25,7 +25,7 @@ To test this package locally you will need to:
 1. From the root of the project, execute `choco pack`
 1. Then run `choco install microsoftwebdriver -dv -s .`
 
-* For Chromium-based engine:
+* For new MicrosoftEdge:
 1. Navigate to 'MSEdgeDriver'
 1. Install [Chocolatey](https://chocolatey.org/install)
 1. Open an elevated PowerShell window

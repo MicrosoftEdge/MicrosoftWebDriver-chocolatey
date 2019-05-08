@@ -1,6 +1,5 @@
 ﻿$osVersion = [System.Environment]::OSVersion.Version
 $major = $osVersion.Major
-$build = $osVersion.Build
 
 if ($major -ne 10) {
   throw 'Unsupported Windows version.'
@@ -15,4 +14,4 @@ if ([Environment]::Is64BitProcess) {
 
 $destination = Join-Path -path (get-item env:\windir).value -ChildPath $childpath
 
-Remove-Item -path $destination\MSEdgeDriver.exe
+Remove-Item -path $destination\msedgedriver.exe
